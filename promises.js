@@ -13,4 +13,3 @@ myPromise.then(function(resolve){
 }).catch(function(reject){
 	console.log(reject);
 });
-
