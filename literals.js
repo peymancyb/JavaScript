@@ -32,3 +32,10 @@ console.log(b);
 
     source:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 */
+
+//difference of using String.raw
+var str = `Hi\n${2+3}!`;
+console.log(str.length);
+
+var str2 = String.raw`Hi\n${2+3}!`;
+console.log(str2.length);
