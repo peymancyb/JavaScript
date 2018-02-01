@@ -47,3 +47,8 @@ new functionName();
 functionName.apply(this,["hi"]);
 //call method pass can bind this, and pass values in array as arguments
 functionName.call(this,"hi");
+
+
+
+//A function declaration tells the compiler about a function's name, return type,
+// and parameters. A function definition provides the actual body of the function.
