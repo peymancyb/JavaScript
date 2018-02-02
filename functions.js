@@ -52,3 +52,39 @@ functionName.call(this,"hi");
 
 //A function declaration tells the compiler about a function's name, return type,
 // and parameters. A function definition provides the actual body of the function.
+
+
+
+
+
+//what is set and get keyword?
+
+/*
+  The set syntax binds an object property to a function to be called when there is an attempt to set that property.
+  example:
+  let obj = {
+    set setProp(name){
+      this.log.push(name);
+    },
+    log:[]
+  };
+
+  obj.setProp = 'name';
+
+
+  The get syntax binds an object property to a function that will be called when that property is looked up.
+  example:
+
+  let obj = {
+    get getProp(){
+      if(this.log.length!==0){
+        return this.log[this.log.length-1];
+      }
+    },
+    log:['a','b','c']
+  };
+
+  console.log(obj.getProp);
+
+
+*/
