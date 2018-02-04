@@ -34,7 +34,7 @@
 //then take precedence over any other existing or future package-lock.json files.
 
 
-// It's important to communicate the extent of changes in a new release of code, 
+// It's important to communicate the extent of changes in a new release of code,
 // because sometimes updates can break code that a package needs
 // (called dependencies).Semantic versioning (semver) is a standard that was designed
 //  to solve this problem.
