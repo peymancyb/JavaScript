@@ -45,14 +45,6 @@ class Toggle extends Component{
   }
 }
 
-
-
-
-
-
-
-
-
 class Tog extends Component {
   constructor(){
     super();
@@ -81,6 +73,60 @@ const TogleMenu = props => (
       )}
     </Tog>
   );
+
+
+
+
+
+
+
+
+
+
+//HOC is a function that accepts a component as an argument
+//as we receive component props we do {...this.props} lets make a component
+
+const HocComponent = (Main)=>{
+  return class HocComponent extends Component{
+    constructor(){
+      super();
+      this.toggle = this.toggle.bind(this);
+      this.state ={
+        show:false
+      }
+    }
+    toggle(){
+      this.setState({
+        show: !this.state.show
+      })
+    }
+    render(){
+      return(
+        <div>
+          <Main
+            {...this.props}
+            onMe={this.toggle}
+          />
+          <div>
+            {this.state.show ? this.props.children : ''}
+          </div>
+        </div>
+      );
+    }
+  }
+}
+
+@HocComponent
+class MainComponent extends Component{
+  render(){
+    return(
+      <div onClick={this.props.onMe}>
+        {this.props.title}
+      </div>
+    );
+  }
+}
+
 
 
 // function makeToggleable(Clickable){
@@ -140,6 +186,10 @@ class App extends Component {
         <TogleMenu title='do'>
           <p>dochizimore</p>
         </TogleMenu>
+
+        <MainComponent title="new">
+          <p>newOne</p>
+        </MainComponent>
 
       </div>
     );
